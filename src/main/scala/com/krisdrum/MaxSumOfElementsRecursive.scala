@@ -1,14 +1,6 @@
 package com.krisdrum
 
-object MaxSumOfElementsRecursive extends App {
-  val testSeqs: Seq[(Seq[Int], Int)] = Seq(
-    Seq(1,2,3,4,5) -> 12,
-    Seq() -> 0,
-    Seq(1,2,3,-1) -> 6,
-    Seq(-1,-2,-3) -> 0,
-    Seq(2,-1,3,-2,4,-3,5) -> 9
-  )
-
+trait MaxSumOfElementsRecursive extends App {
   def max(seq: Seq[Int]): Int = {
     def innerMax(seq: Seq[Int], localMax: Int, globalMax: Int): Int = seq match {
       case Nil => globalMax
@@ -20,5 +12,4 @@ object MaxSumOfElementsRecursive extends App {
 
     innerMax(seq, 0, 0)
   }
-
 }
